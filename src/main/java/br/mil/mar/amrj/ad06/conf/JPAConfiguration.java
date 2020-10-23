@@ -26,11 +26,6 @@ public class JPAConfiguration {
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         
-//		dataSource.setUsername("usprpc1a");
-//		dataSource.setPassword("usprpc01"); 
-//		dataSource.setUrl("jdbc:oracle:thin:@10.1.32.14:1521:amrj");
-		
-
         dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
         factoryBean.setDataSource(dataSource);
         
@@ -40,7 +35,7 @@ public class JPAConfiguration {
         props.setProperty("hibernate.format_sql", "true");
         props.setProperty("hibernate.default_schema", "AMDBA");
         props.setProperty("hibernate.connection.datasource", "java:/comp/env/jdbc/ad05");
-//      props.setProperty("hibernate.hbm2ddl.auto", "update");
+        props.setProperty("hibernate.hbm2ddl.auto", "update");
         factoryBean.setJpaProperties(props);
 
         factoryBean.setPackagesToScan("br.mil.mar.amrj.ad06.model");
