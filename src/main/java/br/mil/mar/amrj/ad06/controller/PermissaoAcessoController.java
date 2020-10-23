@@ -15,13 +15,13 @@ import br.mil.mar.amrj.ad06.DAO.PermissaoAcessoDao;
 import br.mil.mar.amrj.ad06.model.PermissaoAcesso;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/permissao/")
 public class PermissaoAcessoController {
 	
 	@Autowired
 	PermissaoAcessoDao permissaoDao;
 
-	@GetMapping(value = "/permissao")
+	@GetMapping(value = "idSess")
 	public ResponseEntity<Serializable> getPermissao(@RequestParam String idSess) {
 		
 		if(idSess == null || idSess.isEmpty())
