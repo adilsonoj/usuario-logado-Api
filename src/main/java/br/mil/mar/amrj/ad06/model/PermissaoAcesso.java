@@ -50,7 +50,7 @@ public class PermissaoAcesso implements Serializable{
 	private String oi;
 
 	@ManyToOne
-	@JoinColumn( name = "CD_NIVL_ACES", referencedColumnName = "CD_NIVL_ACES", insertable = false, updatable = false )
+	@JoinColumn( name = "CD_NIVL_ACES", referencedColumnName = "CD_NIVL_ACES" )
 	private CodigoNivelAcesso codigoNivelAcesso;
 	
 	@ManyToOne
